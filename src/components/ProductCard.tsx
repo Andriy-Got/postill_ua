@@ -6,7 +6,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const { name, fabric, price, oldPrice, badge, image } = product;
 
   return (
-    <div className="bg-[#FFFFFF] border border-[#E5E0D8] rounded-2xl overflow-hidden flex flex-col group hover:shadow-md transition-all duration-300">
+    <div className="bg-[#FFFFFF] border border-[#E5E0D8] rounded-2xl overflow-hidden flex flex-col h-full group hover:shadow-md transition-all duration-300">
       <div className="aspect-[3/4] relative overflow-hidden bg-[#FAF8F5]">
         <Image
           src={image}
@@ -31,7 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </button>
       </div>
 
-      <div className="p-4 flex flex-col flex-1 justify-between">
+      <div className="p-4 pb-5 flex flex-col flex-1">
         <div>
           <p className="text-[11px] font-medium tracking-wider text-[#766E65] uppercase">
             {fabric}
@@ -41,7 +41,7 @@ export default function ProductCard({ product }: { product: Product }) {
           </p>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-[#E5E0D8]/60 flex items-center justify-between">
+        <div className="mt-auto pt-3 border-t border-[#E5E0D8]/60 flex items-center justify-between">
           <div className="flex items-baseline gap-1.5">
             <span className="font-bold text-[#1A1A1A]">{price}&nbsp;₴</span>
             {oldPrice && (

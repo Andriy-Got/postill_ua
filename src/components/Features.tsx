@@ -27,19 +27,21 @@ const features: { Icon: LucideIcon; title: string; subtitle: string }[] = [
 
 export default function Features() {
   return (
-    <section className="bg-[#FFFFFF] border-y border-[#E5E0D8] pt-12 lg:pt-16">
-      <Container className="grid grid-cols-2 gap-6 lg:flex lg:flex-wrap lg:justify-between lg:gap-x-6">
-        {features.map(({ Icon, title, subtitle }) => (
-          <div key={title} className="flex items-center">
-            <div className="bg-[#FAF8F5] p-3 rounded-full text-[#1A1A1A] mr-3">
-              <Icon size={20} strokeWidth={1.5} />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-[#1A1A1A]">{title}</p>
-              <p className="text-sm text-[#666666]">{subtitle}</p>
-            </div>
-          </div>
-        ))}
+    <section className="relative z-30 -mt-10 sm:-mt-12 lg:-mt-16">
+      <Container>
+        <ul className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 bg-white rounded-3xl shadow-md p-6 sm:p-8">
+          {features.map(({ Icon, title, subtitle }) => (
+            <li key={title} className="flex items-center gap-3 min-w-0">
+              <span className="shrink-0 flex items-center justify-center bg-[#FAF8F5] text-[#1A1A1A] rounded-full p-3">
+                <Icon aria-hidden="true" size={20} strokeWidth={2} />
+              </span>
+              <span className="min-w-0">
+                <p className="text-sm font-medium text-[#1A1A1A]">{title}</p>
+                <p className="text-sm text-[#766E65]">{subtitle}</p>
+              </span>
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   );
