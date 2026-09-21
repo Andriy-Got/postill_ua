@@ -47,6 +47,14 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  --color-footer-surface: var(--footer-surface);
+  --color-footer-surface-muted: var(--footer-surface-muted);
+  --color-footer-text: var(--footer-text);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-border: var(--footer-border);
+  --color-footer-accent: var(--footer-accent);
+  --color-footer-accent-foreground: var(--footer-accent-foreground);
 }
 
 :root {
@@ -82,6 +90,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Footer surface — deep warm tone drawn from the brand photography */
+  --footer-surface: #211d19;
+  --footer-surface-muted: #2b241f;
+  --footer-text: #f6f1e9;
+  --footer-muted: #c2b6a6;
+  --footer-border: #3b342c;
+  --footer-accent: #c17a4a;
+  --footer-accent-foreground: #211d19;
 }
 
 .dark {

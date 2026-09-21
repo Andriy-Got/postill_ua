@@ -11,7 +11,7 @@ export type Product = {
 export const featuredProducts: Product[] = [
   {
     id: "lisovi-druzi",
-    name: "Комплект 'Лісові друзі'",
+    name: "Комплект «Лісові друзі»",
     fabric: "Ранфорс",
     price: 1650,
     oldPrice: 1950,
@@ -20,7 +20,7 @@ export const featuredProducts: Product[] = [
   },
   {
     id: "warm-beige",
-    name: "Комплект 'Warm Beige'",
+    name: "Комплект «Warm Beige»",
     fabric: "Ранфорс",
     price: 1850,
     badge: "ТОП",
@@ -28,7 +28,7 @@ export const featuredProducts: Product[] = [
   },
   {
     id: "terracotta-bloom",
-    name: "Комплект 'Terracotta Bloom'",
+    name: "Комплект «Terracotta Bloom»",
     fabric: "Бязь Gold Lux",
     price: 1750,
     oldPrice: 2050,
@@ -37,7 +37,7 @@ export const featuredProducts: Product[] = [
   },
   {
     id: "myatnyi-zatyshok",
-    name: "Комплект 'М'ятний затишок'",
+    name: "Комплект «М'ятний затишок»",
     fabric: "Ранфорс",
     price: 1900,
     image: "/images/product-placeholder.jpg",
