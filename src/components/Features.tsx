@@ -27,8 +27,8 @@ const features: { Icon: LucideIcon; title: string; subtitle: string }[] = [
 
 export default function Features() {
   return (
-    <section className="bg-[#FFFFFF] border-y border-[#E5E0D8] py-6">
-      <Container className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="bg-[#FFFFFF] border-y border-[#E5E0D8] pt-12 lg:pt-16">
+      <Container className="grid grid-cols-2 gap-6 lg:flex lg:flex-wrap lg:justify-between lg:gap-x-6">
         {features.map(({ Icon, title, subtitle }) => (
           <div key={title} className="flex items-center">
             <div className="bg-[#FAF8F5] p-3 rounded-full text-[#1A1A1A] mr-3">
@@ -36,7 +36,7 @@ export default function Features() {
             </div>
             <div>
               <p className="text-sm font-medium text-[#1A1A1A]">{title}</p>
-              <p className="text-xs text-[#766E65]">{subtitle}</p>
+              <p className="text-sm text-[#666666]">{subtitle}</p>
             </div>
           </div>
         ))}

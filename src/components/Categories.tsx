@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import SectionHeader from "@/components/SectionHeader";
 
 const categories = [
   {
@@ -31,11 +32,9 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="py-12">
+    <section className="pt-12 lg:pt-16">
       <Container>
-        <h2 className="font-serif text-xl md:text-2xl font-normal text-[#1A1A1A] mb-6">
-          Популярні категорії
-        </h2>
+        <SectionHeader title="Популярні категорії" className="mb-6" />
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
           {categories.map(({ image, title, subtitle }) => (
             <div
@@ -53,7 +52,7 @@ export default function Categories() {
               </div>
               <div className="text-center py-4 px-2">
                 <p className="text-sm font-medium text-[#1A1A1A]">{title}</p>
-                <p className="text-xs text-[#766E65] mt-1">{subtitle}</p>
+                <p className="text-sm text-[#666666] mt-1">{subtitle}</p>
               </div>
             </div>
           ))}

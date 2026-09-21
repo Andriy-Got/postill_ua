@@ -20,7 +20,7 @@ const actionIcons = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E5E0D8]">
+    <header className="sticky top-0 z-50 w-full bg-[#FAF8F5] border-b border-[#E5E0D8]">
       <Container className="py-4 grid grid-cols-2 lg:grid-cols-3 items-center">
         <Link
           href="/"
