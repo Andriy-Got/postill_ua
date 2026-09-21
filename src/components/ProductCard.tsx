@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { Heart, ShoppingBag } from "lucide-react";
 import type { Product } from "@/data/products";
+import { useCartStore } from "@/lib/store/useCartStore";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const { name, fabric, price, oldPrice, badge, image } = product;
+  const { id, name, fabric, price, oldPrice, badge, image } = product;
+  const addItem = useCartStore((state) => state.addItem);
 
   return (
     <div className="bg-[#FFFFFF] border border-[#E5E0D8] rounded-2xl overflow-hidden flex flex-col h-full group hover:shadow-md transition-all duration-300">
@@ -52,6 +56,7 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
           <button
             type="button"
+            onClick={() => addItem({ id, name, price, image, fabric })}
             className="bg-[#1A1A1A] hover:bg-[#333333] text-white text-xs px-3 py-2 rounded-lg flex items-center gap-1.5 transition-colors"
           >
             <ShoppingBag size={14} strokeWidth={1.5} />

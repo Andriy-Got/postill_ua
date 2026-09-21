@@ -1,6 +1,10 @@
+"use client";
+
 import { ChevronDown, Search, User, Heart, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import { useCartStore } from "@/lib/store/useCartStore";
+import { useHasMounted } from "@/lib/hooks/useHasMounted";
 
 const navLinks = [
   { label: "Ранфорс", href: "/ranfors" },
@@ -15,10 +19,13 @@ const actionIcons = [
   { Icon: Search, label: "Пошук" },
   { Icon: User, label: "Кабінет" },
   { Icon: Heart, label: "Обране" },
-  { Icon: ShoppingBag, label: "Кошик" },
 ];
 
 export default function Header() {
+  const hasMounted = useHasMounted();
+  const openCart = useCartStore((state) => state.openCart);
+  const totalCount = useCartStore((state) => state.getTotalCount());
+
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAF8F5] border-b border-[#E5E0D8]">
       <Container className="py-4 grid grid-cols-2 lg:grid-cols-3 items-center">
@@ -59,6 +66,20 @@ export default function Header() {
               <Icon size={20} strokeWidth={1.5} color="#1A1A1A" />
             </button>
           ))}
+
+          <button
+            type="button"
+            aria-label="Кошик"
+            onClick={openCart}
+            className="relative hover:opacity-70 transition-opacity"
+          >
+            <ShoppingBag size={20} strokeWidth={1.5} color="#1A1A1A" />
+            {hasMounted && totalCount > 0 && (
+              <span className="absolute -top-2 -right-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#1A1A1A] px-1 text-[10px] font-medium text-white">
+                {totalCount}
+              </span>
+            )}
+          </button>
         </div>
       </Container>
     </header>
