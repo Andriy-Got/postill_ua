@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Container from "@/components/ui/Container";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/90 via-[#FAF8F5]/50 to-transparent w-full md:w-3/5 z-10" />
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center items-start">
+      <Container className="relative z-20 h-full flex flex-col justify-center items-start">
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#1A1A1A] leading-[1.2] mb-4 max-w-md">
           Постільна білизна
           <br />
@@ -32,7 +33,7 @@ export default function Hero() {
         >
           До каталогу
         </Link>
-      </div>
+      </Container>
     </section>
   );
 }

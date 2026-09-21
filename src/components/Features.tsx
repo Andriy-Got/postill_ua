@@ -1,5 +1,6 @@
 import { Leaf, Award, Heart, Truck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import Container from "@/components/ui/Container";
 
 const features: { Icon: LucideIcon; title: string; subtitle: string }[] = [
   {
@@ -26,8 +27,8 @@ const features: { Icon: LucideIcon; title: string; subtitle: string }[] = [
 
 export default function Features() {
   return (
-    <section className="bg-[#FFFFFF] border-y border-[#E5E0D8] py-6 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="bg-[#FFFFFF] border-y border-[#E5E0D8] py-6">
+      <Container className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map(({ Icon, title, subtitle }) => (
           <div key={title} className="flex items-center">
             <div className="bg-[#FAF8F5] p-3 rounded-full text-[#1A1A1A] mr-3">
@@ -39,7 +40,7 @@ export default function Features() {
             </div>
           </div>
         ))}
-      </div>
+      </Container>
     </section>
   );
 }

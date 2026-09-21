@@ -1,10 +1,11 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Container from "@/components/ui/Container";
 
 export default function TopBar() {
   return (
-    <div className="w-full bg-[#FAF8F5] border-b border-[#E5E0D8] text-[#766E65] text-xs py-2.5 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <div className="w-full bg-[#FAF8F5] border-b border-[#E5E0D8] text-[#766E65] text-xs py-2.5">
+      <Container className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span>Доставка по всій Україні</span>
           <span className="hidden sm:inline">•</span>
@@ -28,7 +29,7 @@ export default function TopBar() {
             <ChevronDown size={14} strokeWidth={1.5} />
           </Link>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
